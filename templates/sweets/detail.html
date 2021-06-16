@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+{% block content %}
+      <h1>Sweets ...</h1>
+
+      <p>{{ sweet.name }} Details</p>
+
+      <ul>
+           <li>Count: {{ sweet.count }}</li>
+           <li>Flavor: {{ sweet.flavor }}</li>
+           <li>Purchaser: {{ sweet.purchaser }}</li>
+      </ul>
+      <a href="{% url 'update' sweet.pk %}">Update</a>
+      <a href="{% url 'delete' sweet.pk %}">Delete</a>
+      <a href="{% url 'list' %}">Back to list</a>
+
+{% endblock content %}
