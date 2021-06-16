@@ -1,0 +1,13 @@
+<!-- python manage.py collectstatic -->
+
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h2>Add Sweet</h2>
+<form method="post" class="uniForm">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <input type="submit" value="Add">
+</form>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block content %}
+      <h1>Sweets ...</h1>
+      <form method="post" class="uniForm">
+        {% csrf_token %}
+        <p>Do you really want to delete "{{ sweet.name }}"?</p>
+        <input type="submit" value="OK">
+      </form>
+      <a href="{% url 'list' %}">Back to list</a>
+      
+{% endblock content %}
